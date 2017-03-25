@@ -1,3 +1,49 @@
-<h1>
-  {{title}}
-</h1>
+<div class="row">
+  <div class="row">
+    <div class="col s1">
+      <div class="input-field col s3">
+        <input disabled id="first_name" type="text" class="validate">
+        <label for="first_name">Mantissa</label>
+      </div>
+    </div>
+    <div class="row col s11">
+      <div class="input-field col s3">
+        <input id="first_name" [(ngModel)]="ma.base" type="text" class="validate">
+        <label for="first_name">B</label>
+      </div>
+      <div class="input-field col s3">
+        <input id="first_name" [(ngModel)]="ma.tamanho" type="text" class="validate">
+        <label for="first_name">T</label>
+      </div>
+      <div class="input-field col s3">
+        <input id="first_name" [(ngModel)]="ma.minExp" type="text" class="validate">
+        <label for="first_name">m</label>
+      </div>
+      <div class="input-field col s3">
+        <input id="first_name" [(ngModel)]="ma.maxExp" type="text" class="validate">
+        <label for="first_name">M</label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <input [(ngModel)]="val1" id="first_name" type="text" class="validate">
+      <label for="first_name">Numero 1</label>
+    </div>
+    <div class="input-field col s6">
+      <input [(ngModel)]="val2" id="first_name" type="text" class="validate">
+      <label for="first_name">Numero 2</label>
+    </div>
+  </div>
+
+  <div class="row container center-align">
+    <a (click)="calcular('soma')" class="waves-effect waves-light btn">Soma</a>
+    <a (click)="calcular('div')" class="waves-effect waves-light btn">Divisão</a>
+    <a (click)="calcular('mult')" class="waves-effect waves-light btn">Multiplicação</a>
+    <a (click)="calcular('dif')" class="waves-effect waves-light btn">Subtração</a>
+  </div>
+
+  <div>
+    <h3 class="center-align">{{result}}</h3>
+  </div>
+</div>
